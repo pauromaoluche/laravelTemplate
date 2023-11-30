@@ -1,8 +1,5 @@
 <?php
 
-use App\Http\Controllers\Frontend\SobreController;
-use App\Http\Controllers\Frontend\ContatoController;
-use App\Http\Controllers\Frontend\IndexController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [IndexController::class, 'index']);
 
-Route::get('/sobre-nos', [SobreController::class, 'index']);
-
-Route::get('/contato', [ContatoController::class, 'index']);
+Route::group([], function () {
+    Route::get('', function () {
+        return 'O';
+    });
+    // Outras rotas do backend aqui
+});
