@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\Backend\IndexController;
+
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,9 +16,10 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-Route::group([], function () {
-    Route::get('', function () {
-        return 'O';
-    });
-    // Outras rotas do backend aqui
+Route::get('/', [IndexController::class, 'index']);
+
+Route::get('login', function(){
+    return "pagina de login";
 });
+
+

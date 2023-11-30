@@ -8,6 +8,6 @@ use Illuminate\Http\Request;
 class SobreController extends Controller
 {
     public function index(){
-        return view ('sobre-nos.index');
+        return view ('frontend.sobre-nos.index');
     }
 }

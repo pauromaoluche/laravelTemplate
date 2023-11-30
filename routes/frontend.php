@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\Frontend\ContatoController;
+use App\Http\Controllers\Frontend\IndexController;
+use App\Http\Controllers\Frontend\SobreController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +16,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::prefix('/')->group(base_path('routes/frontend.php'));
 
-Route::prefix('admin')->group(base_path('routes/backend.php'));
+Route::get('/', [IndexController::class, 'index']);
+
+Route::get('/sobre-nos', [SobreController::class, 'index']);
+
+Route::get('/contato', [ContatoController::class, 'index']);
+
